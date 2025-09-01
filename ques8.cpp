@@ -6,7 +6,7 @@ int countDistinct(int arr[], int n) {
 
     for (int i = 0; i < n; i++) {
         bool isDistinct = true;
-        for (int j = 0; j < i; j++) {
+        for (int j = i+1; j < n; j++) {
             if (arr[i] == arr[j]) {
                 isDistinct = false;
                 break;
@@ -31,3 +31,4 @@ int main() {
     cout << "Total number of distinct elements: " << totalDistinct << endl;
     return 0;
 }
+
